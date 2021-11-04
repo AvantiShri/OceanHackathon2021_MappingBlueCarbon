@@ -4,6 +4,7 @@ The original dataset for this challenge contains images centered on latitude/lon
 
 ## ORNL MODIS subsetting API GetMODISImages
 
+A big credit to Andrew Michaelis who helped me with the ORNL API, scripts here adapted from his [repo](https://github.com/HyperplaneOrg/ornl-modis-site-imgs). 
 This is a simple script that will build a library of modis
 based images using Aqua Satellite product [MYD09A1](https://lpdaac.usgs.gov/products/myd09a1v006/) for a set of target sites via
 ORNL’s modis subsetting api. Basic QC filtering is done and a gamma correction
