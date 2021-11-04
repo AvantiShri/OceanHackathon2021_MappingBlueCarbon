@@ -2,7 +2,7 @@
 
 The original dataset for this challenge contains images centered on latitude/longitude coordinates corresponding to empirically validated field sites for known blue carbon ecosystems curated from the literature and documented in [this dataset](https://nicholasinstitute.duke.edu/focal-areas/coastal-blue-carbon/blue-carbon-data-set). Train, validation, and test sets were chosen such that geographical regions in the validation and test sets are not represented in the training set. Images are 8-day true color RGB images from Jan 1-8, April 1-8, July 1-8, and Oct 1-8 for years 2020, 2019, and 2018, less those images with too much cloud cover (removed through manual inspection and retained in the folder called 'clouds' in the corresponding folder). Image dimensions are 224x224x3. Images are downloaded from the [ORNL MODIS subsetting API](https://modis.ornl.gov/data/modis_webservice.html).
 
-## ORNL MODIS subsetting API ornl-modis-site-imgs
+## ORNL MODIS subsetting API GetMODISImages
 
 This is a simple script that will build a library of modis
 based images using Aqua Satellite product [MYD09A1](https://lpdaac.usgs.gov/products/myd09a1v006/) for a set of target sites via
