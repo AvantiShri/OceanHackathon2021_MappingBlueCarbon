@@ -13,15 +13,20 @@ import pandas as pd
 import requests
 from skimage import exposure
 
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("--coordsin",type=str)
+args = parser.parse_args()
+
 # The site file, of the format: site_tag,latitude,longitude,start_date,end_date,kmAboveBelow,kmLeftRight
-CSV = "sites.csv"
+CSV = args.coordsin
 
 URL = "https://modis.ornl.gov/rst/api/v1/"
 ORDURL = "https://modis.ornl.gov/subsetdata"
 HEADER = {'Accept': 'application/json'}
 
 BANDS = ['sur_refl_b01', 'sur_refl_b04', 'sur_refl_b03', 'sur_refl_qc_500m']
-PROD = ['MYD09A1', 'MOD09A1']
+#PROD = ['MYD09A1', 'MOD09A1']
 PROD = ['MYD09A1'] #change to Aqua satellite only
 # MXD09A1 QC, this runs parallel to BANDS, defs at https://lpdaac.usgs.gov/documents/925/MOD09_User_Guide_V61.pdf
 BANDS_QC = [
